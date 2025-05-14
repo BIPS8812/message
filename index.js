@@ -8,10 +8,8 @@ app.get("/", (req, res) => {
     res.send("Hello");
 })
 
-app.get("/twiml", (req, res) => {
-    const { lat, long } = req.query;
-  
-    const message = `Emergency alert from FYP project. The device is at latitude ${lat} and longitude ${long}. Please check your email for more details.`;
+app.get("/twiml", (req, res) => {  
+    const message = `Emergency alert from FYP project. Please check your email for more details.`;
   
     const twiml = `
         <Response>
